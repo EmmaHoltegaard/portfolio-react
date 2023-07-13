@@ -5,7 +5,7 @@ import { Contact } from './pages/Contact'
 import { SkillsAndTech } from './pages/SkillsAndTech'
 import { FeaturedProjects } from './pages/FeaturedProjects'
 import { ui } from '../reducers/ui'
-import { PageContainer, AboutNavTab, ContactNavTab, SkillsAndTechNavTab, FeaturedProjectsNavTab, PageInnerContainer } from './GlobalStyles'
+import { PageContainer, NavTabText, AboutNavTab, ContactNavTab, SkillsAndTechNavTab, FeaturedProjectsNavTab } from './GlobalStyles'
 
 export const PageContent = () => {
   const activePageId = useSelector((state) => state.ui.activePageId)
@@ -18,36 +18,25 @@ export const PageContent = () => {
 
   return (
     <PageContainer>
+      {activePageId === 'about' && <About />}
+      <AboutNavTab onClick={() => handleTabClick('about')}>
+        <NavTabText>ABOUT</NavTabText>
+      </AboutNavTab>
 
-      <PageInnerContainer>
-        <AboutNavTab onClick={() => handleTabClick('about')}>
-          About
-        </AboutNavTab>
-        {activePageId === 'about' && <About />}
-      </PageInnerContainer>
+      {activePageId === 'skillsTech' && (<SkillsAndTech />)}
+      <SkillsAndTechNavTab onClick={() => handleTabClick('skillsTech')}>
+        <NavTabText>SKILLS & TECH</NavTabText>
+      </SkillsAndTechNavTab>
 
-      <PageInnerContainer>
-        <SkillsAndTechNavTab onClick={() => handleTabClick('skillsTech')}>
-          Skills & Tech
-        </SkillsAndTechNavTab>
-        {activePageId === 'skillsTech' && (
-          <SkillsAndTech />
-        )}
-      </PageInnerContainer>
+      {activePageId === 'featuredProjects' && <FeaturedProjects />}
+      <FeaturedProjectsNavTab onClick={() => handleTabClick('featuredProjects')}>
+        <NavTabText>FEATURED PROJECTS</NavTabText>
+      </FeaturedProjectsNavTab>
 
-      <PageInnerContainer>
-        <FeaturedProjectsNavTab onClick={() => handleTabClick('featuredProjects')}>
-          Featured Projects
-        </FeaturedProjectsNavTab>
-        {activePageId === 'featuredProjects' && <FeaturedProjects />}
-      </PageInnerContainer>
-
-      <PageInnerContainer>
-        <ContactNavTab onClick={() => handleTabClick('contact')}>
-          Contact
-        </ContactNavTab>
-        {activePageId === 'contact' && <Contact />}
-      </PageInnerContainer>
+      {activePageId === 'contact' && <Contact />}
+      <ContactNavTab onClick={() => handleTabClick('contact')}>
+        <NavTabText>CONTACT</NavTabText>
+      </ContactNavTab>
 
     </PageContainer>
   )

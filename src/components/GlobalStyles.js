@@ -10,15 +10,13 @@ justify-content: flex-end;
 border: red solid 2px;
 `
 
-// Tab + section
-export const PageInnerContainer = styled.section`
-height: 100%;
-display: flex;
-flex-direction: row-reverse;
-border: green dotted 3px;
-flex-grow: 0;
-flex-shrink: 0;
-`
+// Tab + section - No longer in use
+// export const PageInnerContainer = styled.section`
+// height: 100%;
+// display: flex;
+// flex-direction: row-reverse;
+// /* border: green dotted 3px; */
+// `
 
 // NavTabs
 
@@ -27,10 +25,20 @@ const NavTab = styled.nav`
   height: 100%;
   cursor: pointer;
   writing-mode: vertical-rl;
-  /* text-orientation: mixed; */
-  text-orientation: upright;
-  text-align: center;
-  width: 35px;
+  text-orientation: mixed;
+//  text-orientation: upright;
+  padding-top: 75px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 5px 0 10px 0px grey; */
+`
+
+export const NavTabText = styled.p`
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 1.2rem;
+  /* border: blue 1px dotted; */
 `
 
 export const AboutNavTab = styled(NavTab)`
@@ -51,8 +59,8 @@ export const ContactNavTab = styled(NavTab)`
 
 // Individual Sections, excl. tabs:
 
-export const SectionWrapper = styled.section`
-  border: purple 4px dotted;
+export const SectionWrapper = styled.div`
+  /* border: purple 2px dotted; */
   height: 100%;
-  flex-grow: 1;
+  width: 100%;
 `

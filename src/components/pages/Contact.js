@@ -1,15 +1,15 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { SectionWrapper } from 'components/GlobalStyles'
 
 export const Contact = () => {
   return (
-    <SectionWrapper>
+    <ContactSection>
       <p>This section will have contact info + a contact form</p>
-    </SectionWrapper>
+    </ContactSection>
   )
 }
 
-// const ContactSection = styled(SectionWrapper)`
-//  background: yellow;
-// `
+const ContactSection = styled(SectionWrapper)`
+ background: yellow;
+`

@@ -1,15 +1,15 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { SectionWrapper } from 'components/GlobalStyles'
 
 export const About = () => {
   return (
-    <SectionWrapper>
+    <AboutSection>
       <p>About me</p>
-    </SectionWrapper>
+    </AboutSection>
   )
 }
 
-// const AboutSection = styled(SectionWrapper)`
-//  background: lightblue;
-// `
+const AboutSection = styled(SectionWrapper)`
+  background: lightblue;
+ `

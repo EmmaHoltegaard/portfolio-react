@@ -1,18 +1,18 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { SectionWrapper } from 'components/GlobalStyles'
 import { Skills } from './Skills'
 import { Tech } from './Tech'
 
 export const SkillsAndTech = () => {
   return (
-    <SectionWrapper>
+    <SkillsAndTechSection>
       <Tech />
       <Skills />
-    </SectionWrapper>
+    </SkillsAndTechSection>
   )
 }
 
-// const SkillsAndTechSection = styled(SectionWrapper)`
-//  background: pink;
-// `
+const SkillsAndTechSection = styled(SectionWrapper)`
+ background: pink;
+`

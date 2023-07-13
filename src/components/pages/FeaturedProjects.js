@@ -1,15 +1,15 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { SectionWrapper } from 'components/GlobalStyles'
 
 export const FeaturedProjects = () => {
   return (
-    <SectionWrapper>
+    <FeaturedProjectsSection>
       <p>These are my featured projects</p>
-    </SectionWrapper>
+    </FeaturedProjectsSection>
   )
 }
 
-// const FeaturedProjectsSection = styled(SectionWrapper)`
-//  background: orange;
-// `
+const FeaturedProjectsSection = styled(SectionWrapper)`
+ background: orange;
+`
