@@ -3,11 +3,9 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { ui } from './reducers/ui'
-import { language } from './reducers/language'
 
 const reducer = combineReducers({
-  ui: ui.reducer,
-  language: language.reducer
+  ui: ui.reducer
 })
 
 const store = configureStore({ reducer })

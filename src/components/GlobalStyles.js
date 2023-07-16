@@ -7,7 +7,7 @@ flex-direction: row;
 height: 100vh;
 width: 100vw;
 justify-content: flex-end;
-border: red solid 2px;
+//border: red solid 2px;
 `
 
 // NavTabs
@@ -19,39 +19,42 @@ const NavTab = styled.nav`
   text-orientation: mixed;
 //  text-orientation: upright;
   padding-top: 75px;
-  min-width: 40px;
+  width: 45px;
   display: flex;
   align-items: center;
   /* box-shadow: 5px 0 10px 0px grey; */
 `
 
 export const NavTabText = styled.p`
-  font-weight: 700;
-  font-family: monospace;
-  font-size: 1.2rem;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 1.2;
+  letter-spacing: 4px;
   /* border: blue 1px dotted; */
 `
 
 export const AboutNavTab = styled(NavTab)`
-  background: lightblue;
+  background: #ffffff;
 `
 
 export const SkillsAndTechNavTab = styled(NavTab)`
-  background: pink;
+  background: #d8f3ea;
 `
 
 export const FeaturedProjectsNavTab = styled(NavTab)`
-  background: orange;
+  background: #fde6ea;
 `
 
 export const ContactNavTab = styled(NavTab)`
-  background: yellow;
+  background: #FDF2E4;
 `
 
+//
+//
 // Individual Sections, excl. tabs:
 
 export const SectionWrapper = styled.div`
-  /* border: purple 2px dotted; */
+//  border: purple 2px dotted;
   height: 100%;
   width: 100%;
   display: flex;
@@ -59,22 +62,22 @@ export const SectionWrapper = styled.div`
   justify-content: space-between;
 `
 
-// Add section backgrounds here, like I did for navtabs.
 export const SectionWrapperAbout = styled(SectionWrapper)`
-  background: lightblue;
-`
-export const SectionWrapperContact = styled(SectionWrapper)`
-  background: yellow;
-`
-export const SectionWrapperFeaturedProjects = styled(SectionWrapper)`
-  background: orange;
+  background: #ffffff;
 `
 export const SectionWrapperSkillsAndTech = styled(SectionWrapper)`
-  background: pink;
+  background: #d8f3ea;
+  /* background: lightblue; */
+`
+export const SectionWrapperFeaturedProjects = styled(SectionWrapper)`
+  background: #fde6ea;
+`
+export const SectionWrapperContact = styled(SectionWrapper)`
+  background: #FDF2E4;
 `
 
 export const SectionFooter = styled.div`
-  /* border: pink 3px dotted; */
+//  border: pink 3px dotted;
   position: fixed;
   bottom: 0;
   `

@@ -32,8 +32,9 @@ const LngSwitchButton = styled.button`
   background: transparent;
   border: none;
   font-size: 0.8rem;
+  font-family: 'Libre Franklin', sans-serif;
 `
 
 const LngSwitchWrapper = styled.div`
-  margin: 10px auto 15px 10px;
+  margin: 10px auto 20px 15px;
 `
